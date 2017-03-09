@@ -1,5 +1,5 @@
 <?php
-$txt = "data.def"; 
+$txt = "userdata.def"; 
 if (isset($_POST['username']) && isset($_POST['uiname'])) { // check if both fields are set
     $fh = fopen($txt, 'wa+'); 
 
@@ -17,5 +17,6 @@ if (isset($_POST['username']) && isset($_POST['uiname'])) { // check if both fie
 
     fwrite($fh,$txt); 
     fclose($fh); 
+	header('Location: index.html');
 }
 ?>
