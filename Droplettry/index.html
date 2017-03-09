@@ -37,7 +37,7 @@
 
         #droplet-editor-wrapper {
             position: absolute;
-            top: 25px;
+            top: 0;
             bottom: 25px;
             right: 0;
             left: 0;
@@ -119,9 +119,14 @@
             Info
         </div>
         <div id="info-config">
-            author:<input type="text" id="author" value="">               
-            ui_name:<input type="text" id="scriptclass" value="">
-            <input type="button" value="Save" onClick="WriteToFile()">
+            <form action="SaveUserInfo.php" method="POST">
+                Username:<input name="username" type="text" />
+                <br>AIname:<input name="uiname" type="text" />
+                <br><input type="submit" name="submit" value="Save">
+            </form>
+            <!--<center>author:<input type="text" id="author"></center>
+            <br><center>ui_name:<input type="text" id="scriptclass"></center>
+            <br><center><input type="button" value="Save" onClick="WriteToFile()"></center>-->
         </div>
         <div id="update">
             Update
