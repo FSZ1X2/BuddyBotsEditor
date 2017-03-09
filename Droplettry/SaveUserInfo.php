@@ -1,5 +1,5 @@
 <?php
-$txt = "userdata.def"; 
+$txt = "bots/userdata.def"; 
 if (isset($_POST['username']) && isset($_POST['uiname'])) { // check if both fields are set
     $fh = fopen($txt, 'wa+'); 
 
