@@ -67,6 +67,12 @@ class AssaultFlag(IState):
 fwrite($fi,$in); 
 fclose($fi);
 
+//save bot code:
+//$bots = fopen("$filename.py", 'wa+');
+//$btxt = $_POST['myKey'];
+//fwrite($bots,$btxt); 
+//fclose($bots); 
+
 //create bots:
 $bots = "botscode.py";
 $files = array("$filename.def",$finp,$bots);

@@ -24,26 +24,3 @@
         a.dispatchEvent(e)
     }
 })(console)
-
-function WriteToFile() {
-    var author = document.getElementById("author").value
-    //if (typeof author === "object") {
-    //    author = JSON.stringify(author, undefined, 4)
-    //}
-    var ui_name = document.getElementById("scriptclass").value
-    //if (typeof ui_name === "object") {
-    //    ui_name = JSON.stringify(ui_name, undefined, 4)
-    //}
-    var filename = ui_name + ".def"
-
-    var blob = new Blob([author], { type: 'text/json' }),
-           e = document.createEvent('MouseEvents'),
-           a = document.createElement('a')
-
-    a.download = filename
-    a.href = window.URL.createObjectURL(blob)
-    a.dataset.downloadurl = ['text/json', a.download, a.href].join(':')
-    e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
-    a.dispatchEvent(e)
-
-}
